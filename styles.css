@@ -1,3 +1,9 @@
 body{
 	background-color: rgb(245,245,245);
 }
+
+#mode-selector{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
