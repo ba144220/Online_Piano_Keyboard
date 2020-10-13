@@ -25,16 +25,16 @@ input {
 	justify-content: center;
 
 	width: 100%;
-	min-height: 2.0rem;
+	min-height: 1.5rem;
 	background-color: rgba(0,0,0,0.0);
 	border-radius: 0rem;
-	border-color: #aaaaaa;
+	border-color: #cccccc;
 	border-style: solid;
 	border-width: 1px;
 	border-left-width: 1px;
 	border-right-width: 0px;
 	font-weight: bold;
-	color:#666666;
+	color:#aaaaaa;
 	transition: 0.15s;
 }
 
@@ -51,7 +51,7 @@ input {
 
 
 .nav-btn:focus {
-	background-color: #aaaaaa;
+	background-color: #cccccc;
 	border-style:solid;
 	color: white;
 }
