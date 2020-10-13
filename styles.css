@@ -49,6 +49,7 @@ input {
 	border-bottom-right-radius: 0.5rem;
 }
 
+
 .nav-btn:focus {
 	background-color: #aaaaaa;
 	border-style:solid;
