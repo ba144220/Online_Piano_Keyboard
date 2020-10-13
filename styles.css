@@ -7,7 +7,13 @@ input {
     appearance: none;
 }
 
-#mode-selector{
+.nav-btn {
+	width: 100%;
+	border-radius: 0rem;
+	border-color: rgb(150,150,150);
+}
+
+#mode-selector {
 	width: 100%;
 	display: flex;
 	flex-direction: row;
@@ -15,7 +21,3 @@ input {
 
 }
 
-.nav-btn{
-	width: 100%;
-	border-radius: 0rem;
-}
