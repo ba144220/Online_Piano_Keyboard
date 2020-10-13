@@ -19,20 +19,40 @@ input {
 }
 
 .nav-btn {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+
 	width: 100%;
+	min-height: 2.0rem;
+	background-color: rgba(0,0,0,0.0);
 	border-radius: 0rem;
-	border-color: rgb(120,120,120);
-	border-width: 0px;
+	border-color: #aaaaaa;
+	border-style: solid;
+	border-width: 2px;
+	border-left-width: 1px;
+	border-right-width: 1px;
 	font-weight: bold;
+	color:#666666;
+	transition: 0.15s;
 }
 
 .nav-btn-left{
+	border-left-width: 2px;
 	border-top-left-radius: 0.5rem;
 	border-bottom-left-radius: 0.5rem;
 }
+.nav-btn-right{
+	border-right-width: 2px;
+	border-top-right-radius: 0.5rem;
+	border-bottom-right-radius: 0.5rem;
+}
 
 .nav-btn:focus {
-	background-color: blue;
+	background-color: #aaaaaa;
+	border-style:solid;
+	color: white;
 }
 
 #mode-selector {
