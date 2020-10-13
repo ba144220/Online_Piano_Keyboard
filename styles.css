@@ -10,7 +10,7 @@ input {
 .nav-btn {
 	width: 100%;
 	border-radius: 0rem;
-	border-color: rgb(150,150,150);
+	border-color: red;
 }
 
 #mode-selector {
