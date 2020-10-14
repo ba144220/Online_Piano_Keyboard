@@ -1,18 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>TODO APP in pure JS</title>
-        <link
-            rel="stylesheet"
-            type="text/css"
-            media="screen"
-            href="styles.css"
-        />
+        <title>Online Piano</title>
         <link
             rel="stylesheet"
             type="text/css"
@@ -20,16 +9,11 @@
             href="Piano.css"
         />
     </head>
-    <body ontouchstart="">
-       	<h1>Hello World</h1>
-       	<nav id="mode-selector">
-       		<button class="nav-btn nav-btn-left" onclick="this.focus()">音名</button>
-       		<button class="nav-btn" onclick="this.focus()">音程</button>
-       		<button class="nav-btn" onclick="this.focus()">音階</button>
-       		<button class="nav-btn" onclick="this.focus()">和弦(功能和聲)</button>
-       		<button class="nav-btn nav-btn-right" onclick="this.focus()">和弦(現代和弦)</button>
-       	</nav>
-		<div id="keyboard">
+    <body>
+        <h1 style="text-align: center;">
+            YuChi's Piano Class~~
+        </h1>
+        <div id="keyboard">
             <div class="piano-octave">
                 <div name="do" class="white-key"></div>
                 <div name="re" class="white-key"></div>
@@ -61,7 +45,6 @@
                 <div name="b_si" class="black-key b_si"></div>
             </div>
         </div>
-       	
-    	<script src="main.js"></script>
+        <script src="main.js"></script>
     </body>
 </html>

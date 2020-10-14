@@ -1,0 +1,121 @@
+:root {
+    --white-key-width: 2.5rem;
+    --white-key-height: 10rem;
+
+    --white-key-border-width: 1px;
+
+    --black-key-width: calc(var(--white-key-width) * 0.65);
+    --black-key-height: calc(var(--white-key-height) * 0.7);
+
+    --octave-width: calc(
+        7 * var(--white-key-width) + 12 * var(--white-key-border-width) + 10px
+    );
+
+    --octave-num: 2;
+
+    --keyboard-width: calc(var(--octave-num) * var(--octave-width));
+
+    --size-adjust: 1;
+}
+
+.piano-octave {
+    /* display: inline-block; */
+    float: left;
+    position: relative;
+}
+
+.white-key {
+    float: left;
+    /* display: inline-block; */
+
+    width: calc(var(--white-key-width) * var(--size-adjust));
+    height: calc(var(--white-key-height) * var(--size-adjust));
+
+    border: calc(var(--white-key-border-width) * var(--size-adjust)) solid rgb(50,50,50);
+    background-color: white;
+    border-bottom-left-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
+}
+
+
+.piano-octave:first-of-type > .white-key:first-of-type {
+    border-width: calc(var(--white-key-border-width) * var(--size-adjust))
+        calc(var(--white-key-border-width) * var(--size-adjust))
+        calc(var(--white-key-border-width) * var(--size-adjust))
+        calc(2 * var(--white-key-border-width) * var(--size-adjust));
+}
+
+.piano-octave:first-of-type .white-key:last-of-type {
+    border-width: calc(var(--white-key-border-width) * var(--size-adjust))
+        calc(2 * var(--white-key-border-width) * var(--size-adjust))
+        calc(var(--white-key-border-width) * var(--size-adjust))
+        calc(var(--white-key-border-width) * var(--size-adjust));
+}
+
+.black-key {
+    position: absolute;
+
+    top: 0;
+
+    width: calc(var(--black-key-width) * var(--size-adjust));
+    height: calc(var(--black-key-height) * var(--size-adjust));
+
+    background-color: rgb(30,30,30);
+    border-bottom-left-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
+}
+
+.b_re {
+    left: calc(
+        (var(--white-key-width) - var(--black-key-width) / 2 - 2px) *
+            var(--size-adjust)
+    );
+}
+
+.b_mi {
+    left: calc(
+        (
+                var(--white-key-width) * 2 - var(--black-key-width) / 2 + 3.5 *
+                    var(--white-key-border-width) + 3px
+            ) * var(--size-adjust)
+    );
+}
+
+.b_sol {
+    left: calc(
+        (
+                var(--white-key-width) * 4 - var(--black-key-width) / 2 + 8.5 *
+                    var(--white-key-border-width) - 3px
+            ) * var(--size-adjust)
+    );
+}
+
+.b_la {
+    left: calc(
+        (
+                var(--white-key-width) * 5 - var(--black-key-width) / 2 + 9 *
+                    var(--white-key-border-width) + 1px
+            ) * var(--size-adjust)
+    );
+}
+
+.b_si {
+    left: calc(
+        (
+                var(--white-key-width) * 6 - var(--black-key-width) / 2 + 10 *
+                    var(--white-key-border-width) + 4px
+            ) * var(--size-adjust)
+    );
+}
+
+#keyboard {
+    width: calc(var(--keyboard-width) * var(--size-adjust));
+
+    margin: auto;
+}
+
+@media screen and (min-width: 1000px) {
+    :root {
+        --size-adjust: 2;
+    }
+}
