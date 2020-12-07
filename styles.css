@@ -14,7 +14,7 @@ input {
     appearance: none;
 }
 
-:focus{
+.nav-btn:focus{
     outline: 0px;
 }
 
@@ -55,7 +55,19 @@ input {
 	color: white;
 }
 
+.note-name{
+	margin:0rem;
+	position: absolute;
+	bottom:0rem;
+	border-width: 1px;
+	border-color:blue;
+	border-style:solid;
+}
 
+#title {
+	color: gray;
+	font-weight: lighter;
+}
 #mode-selector {
 	width: 90%;
 	display: flex;

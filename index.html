@@ -21,7 +21,7 @@
         />
     </head>
     <body ontouchstart="">
-       	<h1>Hello World</h1>
+       	<h1 id="title">鋼琴鍵盤</h1>
        	<nav id="mode-selector">
        		<button class="nav-btn nav-btn-left" onclick="this.focus()">音名</button>
        		<button class="nav-btn" onclick="this.focus()">音程</button>
@@ -31,7 +31,7 @@
        	</nav>
 		<div id="keyboard">
             <div class="piano-octave">
-                <div name="do" class="white-key"></div>
+                <div name="do" class="white-key left-most-key"><p class="note-name">C</p></div>
                 <div name="re" class="white-key"></div>
                 <div name="mi" class="white-key"></div>
                 <div name="fa" class="white-key"></div>
@@ -52,7 +52,7 @@
                 <div name="fa" class="white-key"></div>
                 <div name="sol" class="white-key"></div>
                 <div name="la" class="white-key"></div>
-                <div name="si" class="white-key"></div>
+                <div name="si" class="white-key right-most-key"></div>
     
                 <div name="b_re" class="black-key b_re"></div>
                 <div name="b_mi" class="black-key b_mi"></div>

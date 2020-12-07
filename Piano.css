@@ -4,7 +4,7 @@
 
     --white-key-border-width: 1px;
 
-    --black-key-width: calc(var(--white-key-width) * 0.65);
+    --black-key-width: calc(var(--white-key-width) * 0.63);
     --black-key-height: calc(var(--white-key-height) * 0.7);
 
     --octave-width: calc(
@@ -16,6 +16,8 @@
     --keyboard-width: calc(var(--octave-num) * var(--octave-width));
 
     --size-adjust: 1;
+
+    --border-rad: 0.4rem;
 }
 
 .piano-octave {
@@ -26,17 +28,26 @@
 
 .white-key {
     float: left;
-    /* display: inline-block; */
+
+    position: relative;
+    display: flex;
+    align-items: center;
 
     width: calc(var(--white-key-width) * var(--size-adjust));
     height: calc(var(--white-key-height) * var(--size-adjust));
 
-    border: calc(var(--white-key-border-width) * var(--size-adjust)) solid rgb(50,50,50);
-    background-color: white;
-    border-bottom-left-radius: 0.2rem;
-    border-bottom-right-radius: 0.2rem;
+    border: calc(var(--white-key-border-width) * var(--size-adjust)) solid rgb(70,70,70);
+    background-color: rgba(255,255,255,0.8);
+    border-bottom-left-radius: var(--border-rad);
+    border-bottom-right-radius: var(--border-rad);
 }
 
+.left-most-key {
+    border-top-left-radius: var(--border-rad);
+}
+.right-most-key {
+    border-top-right-radius: var(--border-rad);
+}
 
 .piano-octave:first-of-type > .white-key:first-of-type {
     border-width: calc(var(--white-key-border-width) * var(--size-adjust))
@@ -60,10 +71,20 @@
     width: calc(var(--black-key-width) * var(--size-adjust));
     height: calc(var(--black-key-height) * var(--size-adjust));
 
-    background-color: rgb(30,30,30);
-    border-bottom-left-radius: 0.2rem;
-    border-bottom-right-radius: 0.2rem;
+    background-color: rgb(60,60,60);
+    border-bottom-left-radius: var(--border-rad);
+    border-bottom-right-radius: var(--border-rad);
+    border-color: rgb(60,60,60);
+    border-style: solid;
+    border-width: 2px;
+
 }
+
+.black-key:hover {
+    background-color: rgb(102, 153, 255);
+}
+
+
 
 .b_re {
     left: calc(
